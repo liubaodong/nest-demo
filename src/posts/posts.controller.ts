@@ -33,17 +33,18 @@ export class PostsController {
   }
   @ApiOperation({ summary: '删除帖子' })
   @Delete(':id')
-  remove(): object {
+  remove(@Param('id') id: string): object {
     return {
       success: true,
+      id,
     };
   }
   @ApiOperation({ summary: '修改帖子' })
   @Put(':id')
-  update(@Param('id') id: string): object {
+  update(@Param('id') id: string, @Body() body: CreatePostDto): object {
     return {
       success: true,
-      id,
+      body,
     };
   }
   @ApiOperation({ summary: '新增帖子' })
