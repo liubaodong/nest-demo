@@ -10,9 +10,12 @@ import { InitMiddleware } from './middleware/init.middleware';
 import { NewsMiddleware } from './middleware/news.middleware';
 import { UserMiddleware } from './middleware/user.middleware';
 import { UserController } from './user/user.controller';
+import { AdminModule } from './module/admin/admin.module';
+import { DefaultModule } from './module/default/default.module';
+import { ApiModule } from './module/api/api.module';
 
 @Module({
-  imports: [],
+  imports: [AdminModule, DefaultModule, ApiModule],
   controllers: [AppController, UserController],
   providers: [AppService],
 })
