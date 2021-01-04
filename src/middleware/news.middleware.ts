@@ -1,9 +1,9 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 
 @Injectable()
-export class InitMiddleware implements NestMiddleware {
+export class NewsMiddleware implements NestMiddleware {
   use(req: any, res: any, next: () => void) {
-    console.log('init 中间件', Date.now());
+    console.log('我是news中间件');
     next();
   }
 }
