@@ -13,9 +13,10 @@ import { UserController } from './user/user.controller';
 import { AdminModule } from './module/admin/admin.module';
 import { DefaultModule } from './module/default/default.module';
 import { ApiModule } from './module/api/api.module';
+import { ShareModule } from './module/share/share.module';
 
 @Module({
-  imports: [AdminModule, DefaultModule, ApiModule],
+  imports: [AdminModule, DefaultModule, ApiModule, ShareModule],
   controllers: [AppController, UserController],
   providers: [AppService],
 })
