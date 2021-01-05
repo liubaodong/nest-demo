@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('news')
+@Controller('admin/news')
 export class NewsController {
   @Get()
   index() {
