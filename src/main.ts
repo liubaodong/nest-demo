@@ -22,7 +22,7 @@ async function bootstrap() {
   app.use(
     session({
       secret: 'keyboard cat',
-      cookie: { maxAge: 60000, httpOnly: true },
+      cookie: { maxAge: 6000, httpOnly: true },
     }),
   ); //配置session
 

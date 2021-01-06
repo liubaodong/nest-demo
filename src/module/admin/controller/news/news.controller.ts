@@ -14,8 +14,8 @@ export class NewsController {
   ) {}
   @Get()
   index() {
-    console.log(this.appService.getConfig());
-    console.log(this.baseService.getData());
+    // console.log(this.appService.getConfig());
+    // console.log(this.baseService.getData());
     return '我是admin里面的news页面';
   }
   @Get('add')
